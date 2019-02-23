@@ -1,0 +1,151 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Gritxemplers</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<link href="css/regstyle.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+            $(function () {
+                $("#name,#college,#name1,#dept").keydown(function (e) {
+                    if (e.shiftKey || e.ctrlKey || e.altKey) {
+                        e.preventDefault();
+                    } 
+					else {
+                        var key = e.keyCode;
+                        if (!((key == 8) || (key == 32) || (key == 46) || (key >= 35 && key <= 40) || (key >= 65 && key <= 90))) {
+                            e.preventDefault();
+						}
+                    }
+                });
+            });
+		</script>
+		
+		<script type="text/javascript">
+			$(function () {
+				$("#phone").keydown(function (e) {
+					if (e.shiftKey || e.ctrlKey || e.altKey) {
+						e.preventDefault();
+					}
+					else {
+						var key = e.keyCode;
+						if (!((key == 8) || (key == 32) || (key == 46) || (key >= 35 && key <= 40) || (key >= 48 && key <= 57))) {
+							e.preventDefault();
+						}
+					}
+				});
+			});
+		</script>
+        <script>
+			$("form").ready(function () {				
+                $("#submit").click(function (e) {
+					$("form").ready(function () {
+						if ($("#name").val() == "") {
+							alert("Please fill the name field");
+                                e.preventDefault();
+                            }
+                        else if ($("#phone").val() == "") {
+							alert("Please fill the phone field");
+                            e.preventDefault();
+                        }
+                        else if ($("#email").val() == "") {
+                                alert("please fill the email field");
+                                e.preventDefault();
+                        }
+                        else if ($("#college").val() == "") {
+                            alert("please fill the college field");
+                            e.preventDefault();
+                        }
+                        else if ($("#dept").val() == "") {
+                            alert("please fill the department field");
+                            e.preventDefault();
+                        }
+                        else if ($("#year").val() == "") {
+							alert("please fill the year field");
+                            e.preventDefault();
+                        }
+					});
+                });
+            });
+		</script>
+<!-- //js -->
+
+<link href='//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="center-container">
+		<div class="main">
+			<h4 class="w3layouts_head">Register Here</h4>
+				<div class="w3layouts_main_grid">
+					<form action="regsave.php" method="post" class="w3_form_post">
+						<div class="w3_agileits_main_grid w3l_main_grid">
+							<span class="agileits_grid">
+								<label>Name </label>
+								<input type="text" name="name" placeholder="Your Name" id="name" required="true">
+							</span>
+						</div>
+                       						<div class="w3_agileits_main_grid w3l_main_grid">
+							<span class="agileits_grid">
+								<label>Your Email id</label>
+								<input type="text" name="email" placeholder="Your Email" id="email"required="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+							</span>
+						</div>
+						<div class="w3_agileits_main_grid w3l_main_grid">
+							<span class="agileits_grid">
+								<label>Contact</label>
+								<input type="text" name="phone" placeholder="Phone Number" id="phone" required="true">
+								</span>
+						</div>
+<div class="w3_agileits_main_grid w3l_main_grid">
+							<span class="agileits_grid">
+								<label>College  Name</label>
+								<input type="text" name="college" placeholder="College Name" id="college"required="true">
+							</span>
+						</div>
+						
+                        	<div class="w3_agileits_main_grid w3l_main_grid">
+							<span class="agileits_grid">
+								<label>Year</label>
+								
+                                <select name="year" type="text" id="year" required="true">
+                                 
+    <option value="first">First</option>
+  <option value="second">Secong</option>
+    <option value="third">Third</option>
+    <option value="four">Four</option>
+      <option value=""></option>
+                                </select>
+								</span>
+                        </div>
+					<div class="w3_agileits_main_grid w3l_main_grid">
+							<span class="agileits_grid">
+                                <h3 style="color: beige">Registration Fee : RS.50 per person<br>(which will be donated to orphanage)</h3>	
+                        </span>
+                        </div>
+					<div class="w3_main_grid">
+						<div class="w3_main_grid_right">
+						<input type="submit" value="Register">
+                            <input type="button" value="Back" onClick="index.html">
+						</div>
+					</div>
+				</form>
+                    
+				
+			</div>
+				
+				
+		
+		</div>
+	</div>
+    <footer>
+    <center><p class="name">Developed by Jaimahaprabhu A</p></center>	</footer>
+<!-- //footer -->
+</body>
+</html>
